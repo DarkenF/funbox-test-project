@@ -1,0 +1,223 @@
+.item {
+    display: inline-block;
+    position: relative;
+    margin: 0 80px 80px 0;
+    height: 509px;
+    width: 320px;
+}
+
+.item main {
+    height: 472px;
+
+    clip-path: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
+
+    overflow: hidden;
+    position: absolute;
+    border: solid 4px #1698d9;
+    border-radius: 12px;
+    background-color: aliceblue;
+
+}
+.item main.disabled{
+    border: 4px solid #b3b3b3;
+    pointer-events: none;
+}
+
+.item div.disabled:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+
+    opacity: 0.7;
+    background: #F2F2F2;
+
+}
+
+.item main header{
+    max-width: 220px;
+    max-height: 205px;
+}
+
+.item.clicked main{
+    border-color: #D91667;
+}
+
+
+.item main:before {
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    background-color: #1698d9;
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(95% -10px, 100% 0, 0 100%,-10px 95%);
+}
+.item main.disabled:before {
+    background-color: #666666;
+}
+.item.clicked main:before{
+    background-color: #D91667;
+}
+
+/*.imgPosition{*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    width: 368px;*/
+/*    height: 360px;*/
+/*}*/
+
+.item main img {
+    position: absolute;
+    width: 368px;
+    height: 360px;
+    left: -25px;
+    bottom: -88px;
+}
+
+.itemMaker{
+    /*temp*/
+    position: relative;
+    top: 20px;
+    /*margin: 20px 0 5px;*/
+
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #666666;
+}
+
+.itemMaker.hover {
+    color: #E62E7A;
+}
+
+.itemName{
+
+    position: relative;
+    top: 24px;
+
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+.itemName.disabled , .itemStructure.disabled{
+    color: #666666;
+}
+
+.itemStructure{
+
+    position: relative;
+    top: 24px;
+
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.itemDescription{
+
+    position: relative;
+    top: 24px;
+
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.footText{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.footText a {
+    text-decoration: none;
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+}
+
+.footText a:hover{
+    color: red;
+    border-bottom-color: red;
+}
+
+.itemWeight {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background-color: #1698d9;
+    color: white;
+    position: absolute;
+    overflow: hidden;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemWeight.disabled{
+    background-color: #666666;
+}
+
+.itemWeight.clicked{
+    background-color: #D91667;
+}
+
+.itemWeight-value, .itemWeight-dimension{
+    font-family: Trebuchet MS;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 22px;
+    /* identical to box height, or 52% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.itemWeight-value {
+    margin-top: 23px;
+}
+
+.itemWeight-dimension{
+    margin-top: 8px;
+    font-size: 22px;
+}
